@@ -1,0 +1,159 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card {
+  height: 400px;
+  width: 1100px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background: white;
+}
+.cardTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  width: calc(60% - 60px);
+  padding: 0px 50px;
+  font-size: 18px;
+  background: white;
+}
+.cardRightSide {
+  position: relative;
+  top: -400px;
+  left: 620px;
+  width: calc(40% + 50px);
+  height: 100%;
+  background: #4e34ae;
+  border-left: 100px solid white;
+  border-bottom: 400px solid transparent;
+}
+.cardTitle > h1 {
+  margin-bottom: 15px;
+}
+.cardTitle > p {
+  font-size: 24px;
+  font-weight: 400;
+}
+.cardTitle > input {
+  font-size: 20px;
+  font-size: 500;
+  outline: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 10px 30px;
+  padding: 10px;
+  width: 60%;
+  text-align: center;
+}
+.cardTitle > button {
+  margin-top: 5px;
+  margin-left: 130px;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 35px;
+  outline: none;
+  background-image: linear-gradient(
+    to right,
+    #d5daec 0%,
+    #4e34ae 51%,
+    #d5daec 100%
+  );
+  transition: 0.5s;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  cursor: pointer;
+  background-size: 200% auto;
+  box-shadow: 0 0 20px #eee;
+}
+
+button:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+.image {
+  position: absolute;
+  left: 775px;
+  bottom: 89px;
+  width: 500px;
+  height: 400px;
+}
+.icon {
+  background: black;
+  border-radius: 50%;
+}
+.cardRightSide {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.place {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 20px;
+}
+.cardRightSide > p {
+  padding-bottom: 20px;
+  font-size: 27px;
+  font-weight: 500;
+}
+.cardRightSide > .temp {
+  padding-bottom: 20px;
+}
+.cardRightSide > .humidity {
+  padding-bottom: 25px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .image {
+    position: relative;
+    bottom: 400px;
+    left: 600px;
+  }
+}
+@media only screen and (max-width: 1017px) {
+  .cardTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .cardTitle,
+  p {
+    margin-left: 30px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .cardTitle > h1 {
+    text-align: center;
+    margin-left: 280px;
+    text-overflow: clip;
+  }
+  .cardTitle > p {
+    text-align: center;
+    padding: 0 10px;
+    margin-left: 80px;
+  }
+  .cardTitle > input {
+    margin-left: 340px;
+  }
+  .cardTitle > button {
+    margin-left: 320px;
+  }
+  .image {
+    position: relative;
+    left: 700px;
+  }
+}
